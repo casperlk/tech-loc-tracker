@@ -9,6 +9,10 @@
       name="description"
       content="Web site created using create-react-app"
     />
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.0/mapbox-gl.css' rel='stylesheet' />
+
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -27,6 +31,17 @@
     <title>React App</title>
   </head>
   <body>
+
+    <div id='map' style='width: device-width; height: 600px;'></div>
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoibHJnbzAiLCJhIjoiY2trdmYyeDkwMHJwcTJ4anUwNWYza2cweSJ9.v-6fwCBjjCbbtLlNnHXWYw';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+        center: [-74.5, 40], // starting position [lng, lat]
+        zoom: 9 // starting zoom
+    });
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--

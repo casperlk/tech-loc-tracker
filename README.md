@@ -6,3 +6,5 @@ Mapbox GL JS:
 Flask:
   pip3 install Flask
 
+To run:
+  npm start
